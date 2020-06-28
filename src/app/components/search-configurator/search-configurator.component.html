@@ -1,0 +1,23 @@
+<form [formGroup]="form" class="configurator" (submit)="onSubmit()">
+    <mat-radio-group formControlName="option" aria-label="Select an option">
+        <mat-radio-button [value]="SearchOptions.Random">Random</mat-radio-button>
+        <mat-radio-button [value]="SearchOptions.Categories">From categories</mat-radio-button>
+        <div *ngIf="optionControl.value === SearchOptions.Categories && categories" 
+            class="buttons">
+            <div *ngFor="let category of categories"
+                class="buttons__button"
+                [class.buttons__button--active]="category === categoryControl.value"
+                (click)="setCategory(category)">
+                {{category}}
+            </div>
+        </div>
+        <mat-radio-button [value]="SearchOptions.Search">Search</mat-radio-button>
+        <input *ngIf="optionControl.value === SearchOptions.Search"
+            class="search-field"
+            formControlName="searchTerm"
+            type="search"
+            placeholder="Free text search..."
+            (keyup.enter)="onSubmit()">
+    </mat-radio-group>
+    <button [disabled]="!isFormValid() || loading" class="action-button" type="submit">Get a joke</button>
+</form>

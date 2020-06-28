@@ -1,0 +1,18 @@
+<div class="jokes-page">
+    <h1 class="jokes-page__header">MSI 2020</h1>
+    <h2 class="jokes-page__greeting">Hey!</h2>
+    <h3 class="jokes-page__subheader">Let’s try to find a joke for you:</h3>
+    <app-search-configurator 
+        class="jokes-page__configurator"
+        [loading]="isLoading"
+        (searchOption)="getJoke($event)">
+    </app-search-configurator>
+
+    
+    <h3 *ngIf="noResults" class="jokes-page__subheader">No results found</h3>
+    <app-joke-item *ngFor="let joke of jokes"
+        class="jokes-page__joke"
+        [joke]="joke"
+        (changeFavoriteState)="changeFavoriteState(joke)">
+    </app-joke-item>
+</div>

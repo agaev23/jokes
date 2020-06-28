@@ -1,0 +1,9 @@
+<div class="favorite">
+    <h2 class="favorite__header">Favorite</h2>
+    <app-joke-item *ngFor="let joke of favoriteJokes"
+        class="favorite__joke"
+        [joke]="joke"
+        [isCustom]="true"
+        (changeFavoriteState)="changeFavoriteState(joke)">
+    </app-joke-item>
+</div>

@@ -1,0 +1,35 @@
+<div class="joke" [class.joke--custom]="isCustom">
+    <button class="joke__like-btn"
+        (click)="onchangeFavoriteState()">
+        <img *ngIf="!joke.isFavorite" src="assets/icons/like.svg" title="add to favorite">
+        <img *ngIf="joke.isFavorite" src="assets/icons/like-filled.svg" title="remove from favorite">
+    </button>
+    <div class="joke__wrapper">
+        <div class="joke__icon">
+            <img src="assets/icons/message.svg">
+        </div>
+        <div class="joke__content">
+            <p class="joke__id">
+                <span class="joke__id-placeholder">id: </span>
+                <a class="joke__id-link"
+                    target="blank"
+                    [href]="joke.url">
+                    {{joke.id}} 
+                    <img class="joke__id-icon" src="assets/icons/link.svg">
+                </a>
+            </p>
+            <p class="joke__text">
+                {{joke.value}}
+            </p>
+            <div class="joke__info">
+                <div class="joke__data">
+                    Last update
+                    <span class="joke__data--bold" title="{{joke.updated_at | date}}">
+                        {{joke.updated_at | dateAgo}}
+                    </span>
+                </div>
+                <div *ngIf="!isCustom && joke.categories[0]" class="joke__tag">{{joke.categories[0]}}</div>
+            </div>
+        </div>
+    </div>
+</div>

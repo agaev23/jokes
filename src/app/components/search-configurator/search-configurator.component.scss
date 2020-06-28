@@ -1,0 +1,67 @@
+.configurator {
+    display: block;
+}
+
+.buttons {
+    width: calc(100% + 10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 0;
+
+    &__button {
+        margin-right: 10px;
+        margin-bottom: 20px;
+        padding: 6px 15px;
+        border: 2px solid #F8F8F8;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;   
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #ABABAB;
+        cursor: pointer;
+
+        &--active {
+            color: #333333;
+            background: #F8F8F8;
+        }
+    }
+}
+
+.search-field {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 15px;
+    display: block;
+    border: 2px solid #333333;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 16px;
+    outline: none;
+
+    &::placeholder {
+        color: #ABABAB;
+        opacity: 1; /* Firefox */
+    }
+}
+
+.action-button {
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;    
+    color: #FFFFFF;
+    background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+
+    &[disabled] {
+        opacity: 0.5;
+        cursor: default;
+    }
+}

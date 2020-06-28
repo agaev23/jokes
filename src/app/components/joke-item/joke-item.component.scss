@@ -1,0 +1,110 @@
+.joke {
+    padding: 40px;
+    background: #F8F8F8;
+    border-radius: 20px;
+
+    &__like-btn {
+        display: block;
+        margin-left: auto;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__icon {
+        margin-right: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        border-radius: 50%;
+    }
+
+    &__id {
+        margin-bottom: 5px;
+    }
+
+    &__id-placeholder {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 14px;
+        color: #ABABAB;
+        text-transform: uppercase;
+    }
+
+    &__id-link {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 14px;
+        color: #8EA7FF;
+        text-transform: uppercase;
+    }
+
+    &__id-icon {
+        margin-left: 5px;
+    }
+
+    &__text {
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__data {
+        font-size: 10px;
+        line-height: 14px;
+        color: #ABABAB;
+
+        &--bold {
+            font-weight: 500;
+            color: #ABABAB;
+        }
+    }
+
+    &__tag {
+        padding: 6px 15px;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: 2px;
+        text-decoration: uppercase;
+        background-color: #ffffff;
+    }
+}
+
+.joke--custom {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    .joke__icon {
+        background-color: #F8F8F8;
+    }
+
+    .joke__text {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .joke__info {
+        justify-content: flex-start;
+    }
+}

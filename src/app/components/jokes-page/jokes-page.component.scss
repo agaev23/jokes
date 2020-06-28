@@ -1,0 +1,50 @@
+.jokes-page {
+    padding: 40px 140px;
+
+    &__header {
+        margin-bottom: 80px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    &__greeting {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    &__subheader {
+        margin-bottom: 40px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 44px;
+
+        &--fav {
+            margin-top: 60px;
+        }
+    }
+
+    &__configurator {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    &__joke {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .jokes-page {
+        padding: 40px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .jokes-page {
+        padding: 20px 20px 20px;
+    }
+}
